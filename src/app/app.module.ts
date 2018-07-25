@@ -8,7 +8,7 @@ import { WordsComponent } from './words/words.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
-
+import 'rxjs/add/operator/map';
 
 @NgModule({
   declarations: [
