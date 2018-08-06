@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { WordsComponent } from './words/words.component';
+import { VerbsComponent } from './verbs/verbs.component';
+
 import { routing, appRoutingProviders } from './app.routing';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    WordsComponent
+    WordsComponent,
+    VerbsComponent
   ],
   imports: [
     BrowserModule,
