@@ -1,6 +1,24 @@
+<hr>
+
+<h2>Componente Words</h2>
 <h3>Palabras</h3>
 <div>
     <ul>
-        <li *ngFor="let w of words">{{w.translate}}</li>
+        <li *ngFor="let w of words; let i = index" [attr.data-index]="i">
+        	<span>{{w.translate}}
+        		<input type="text" [(ngModel)]="checkWord[i]">
+        		<button (click)="helpWord(i)">Help</button>
+        	</span>
+        </li>
     </ul>
+</div>
+<button (click)="checkAll()">Check</button>
+
+<!-- Statics -->
+<div *ngIf="showStatics">
+	<span>Incorrect: {{incorrect}}</span>
+	<br/>
+	<span>Correct: {{correct}}</span>
+	<br/>
+	<span *ngFor="let h of historyStatics">History: {{h}}<br/></span>
 </div>

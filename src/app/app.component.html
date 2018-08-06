@@ -1,6 +1,12 @@
+<!-- MENU -->
 <mat-toolbar color="primary">
-<span>{{title}}</span>
+	<span>{{title}}</span>
+	<!-- <button mat-button routerLink="login">Login</button>
+  	<button mat-button (click)="onLogout()">Logout</button> -->
 </mat-toolbar>
+
+<!-- INJECT THE HOME COMPONENT-->
 <mat-card>
+  <app-header></app-header>
   <app-home></app-home>
 </mat-card>
