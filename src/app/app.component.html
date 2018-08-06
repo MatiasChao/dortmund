@@ -1,15 +1,18 @@
 <!-- MENU -->
 <mat-toolbar color="primary">
-	<span>{{title}}</span>
+	<h2>App Component</h2>
+	----
+	<h3>{{title}}</h3>
 	<!-- <button mat-button routerLink="login">Login</button>
   	<button mat-button (click)="onLogout()">Logout</button> -->
 </mat-toolbar>
 
-<!-- INJECT THE HOME COMPONENT
+<!-- INJECT THE HOME COMPONENT -->
 <mat-card>
   <app-header></app-header>
   <app-home></app-home>
+  <app-words></app-words>
 </mat-card>
--->
 
-<router-outlet></router-outlet>
+
+<!-- <router-outlet></router-outlet> -->
