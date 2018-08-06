@@ -20,10 +20,11 @@ export class WordsComponent implements OnInit {
 	public words = [];
   public _myService;
   public checkWord = [];
-  public incorrect:int;
-  public correct:int;
-  public showStatics:bool;
+  public incorrect:number;
+  public correct:number;
+  public showStatics:boolean;
   public historyStatics:any[] = [];
+  public wordsFailed:string[] = [];
 
 
     // Darle valor a las propiedades
@@ -55,10 +56,12 @@ export class WordsComponent implements OnInit {
         else {
           //console.log("Incorrect: " + i + " -> " + this.checkWord[i] + " - " +  this.words[i].translate); 
           this.incorrect++;
+          this.wordsFailed.push("Lo ingresado: " + this.checkWord[i] + " lo esperado: " + this.words[i].translate);
         }
       }
       this.historyStatics.push("Corrects: " + this.correct + " / Incorrects: " + this.incorrect);
       console.log(this.historyStatics);
+      console.log("Words failed: " + this.wordsFailed);
     }
 
 }

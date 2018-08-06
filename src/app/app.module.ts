@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { WordsComponent } from './words/words.component';
+import { routing, appRoutingProviders } from './app.routing';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -24,9 +25,10 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatCardModule,  
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 
