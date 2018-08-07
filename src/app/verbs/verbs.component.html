@@ -3,10 +3,39 @@
 <h2>Verbs Component</h2>
 <h3>Regular Verbs</h3>
 <ul>
-   <li *ngFor="let v of regular_verbs">
+    <li>
+        <span>Infinitive</span>
+        <span>Past Simple</span>
+        <span>Past Participle</span>
+        <span>Translate</span>
+    </li>
+   <li *ngFor="let v of regular_verbs; let i = index" [attr.data-index]="i">
+        <!-- <input type="text" [(ngModel)]="v.infinitive"> -->
         <span>{{v.infinitive}}</span>
-        <span>{{v.past_simple}}</span>
-        <span>{{v.past_participle}}</span>
-        <span>{{v.translate}}</span>
+        <input type="text" [(ngModel)]="v.past_simple">
+        <input type="text" [(ngModel)]="v.past_participle">
+        <input type="text" [(ngModel)]="v.translate">
+        <button (ngClick)="helpRegularVerb(i)">Help</button>
    </li> 
+   <button (ngClick)="correctRegularVerbs()">Correct</button>
+</ul>
+
+
+<h2>Irregular Verbs</h2>
+<ul>
+    <li>
+        <span>Infinitive</span>
+        <span>Past Simple</span>
+        <span>Past Participle</span>
+        <span>Translate</span>
+    </li>
+   <li *ngFor="let v of irregular_verbs; let i = index" [attr.data-index]="i">
+        <!-- <input type="text" [(ngModel)]="v.infinitive"> -->
+        <span>{{v.infinitive}}</span>
+        <input type="text" [(ngModel)]="v.past_simple">
+        <input type="text" [(ngModel)]="v.past_participle">
+        <input type="text" [(ngModel)]="v.translate">
+        <button (ngClick)="helpIrregularVerb(i)">Help</button>
+   </li> 
+   <button (ngClick)="correctIrregularVerbs()">Correct</button>
 </ul>

@@ -7,13 +7,23 @@
   	<button mat-button (click)="onLogout()">Logout</button> -->
 </mat-toolbar>
 
-<!-- INJECT THE HOME COMPONENT -->
+<hr>
+<nav>
+	<a [routerLink]="['/home']">Home</a>
+	<a [routerLink]="['/words']">Words</a>
+	<a [routerLink]="['/verbs']">Verbs</a>
+</nav>
+<hr>
+
+<!-- INJECT THE HOME COMPONENT
 <mat-card>
   <app-header></app-header>
   <app-home></app-home>
   <app-words></app-words>
   <app-verbs></app-verbs>
 </mat-card>
+-->
 
 
-<!-- <router-outlet></router-outlet> -->
+
+<router-outlet></router-outlet> 

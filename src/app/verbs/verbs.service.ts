@@ -19,4 +19,8 @@ export class VerbsService {
         return this.http.get<Verb[]>('http://localhost:3000/verbs');
       }
 
+      getIrregularVerbs(): Observable<Verb[]> {
+      	return this.http.get<Verb[]>('http://localhost:3000/irregular_verbs');
+      }
+
 }
