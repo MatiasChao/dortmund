@@ -18,19 +18,34 @@ const httpOptions = {
 
 export class VerbsComponent implements OnInit {
 	public regular_verbs = [];
+  public irregular_verbs = [];
+  public verbs_examples = [];
   public _myService;
+  public articulos;
 
 
     // Darle valor a las propiedades
   	constructor(public servicio : VerbsService, public http: HttpClient) {
       this._myService = servicio;
+      
       this._myService.getRegularVerbs().subscribe(data => this.regular_verbs = data);
-      console.log("Regular verbs: " + this.regular_verbs);
+      this._myService.getIrregularVerbs().subscribe(data => this.irregular_verbs = data);
   	}
 
     // Llamar metodos o hacer funcionalidades 
-    ngOnInit(): void {
-      console.log("Hooa");
+    ngOnInit(){
+      this.verbs_examples = this._myService.getVerbsExamples();
+      /*
+      this._myService.getPruebaHttp().subscribe(
+        result => {
+          console.log(result);
+        },
+        error => {
+          var errorMessage = <any>error;
+          console.log(errorMessage);
+        }
+      );
+      */
     }
 
  

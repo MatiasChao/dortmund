@@ -44,6 +44,8 @@ export class WordsComponent implements OnInit {
     }
 
     checkAll(){
+      //this.historyStatics = null;
+      this.wordsFailed = []; // clean
       this.incorrect = 0;
       this.correct = 0;
       this.showStatics = true;
