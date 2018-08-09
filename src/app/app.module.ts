@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { WordsComponent } from './words/words.component';
 import { VerbsComponent } from './verbs/verbs.component';
+import { ExercisesComponent } from './exercises/exercise.component';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     WordsComponent,
-    VerbsComponent
+    VerbsComponent,
+    ExercisesComponent
   ],
   imports: [
     BrowserModule,

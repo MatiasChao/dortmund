@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router'
 import { WordsComponent } from './words/words.component';
 import { VerbsComponent } from './verbs/verbs.component';
 import { HomeComponent } from './home/home.component';
+import { ExercisesComponent } from './exercises/exercise.component';
 
 const appRoutes: Routes = [
 
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
 
 	{ path: 'words', component: WordsComponent },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'verbs', component: VerbsComponent }
+	{ path: 'verbs', component: VerbsComponent },
+	{ path: 'exercises', component: ExercisesComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
