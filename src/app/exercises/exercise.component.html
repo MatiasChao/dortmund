@@ -1,6 +1,16 @@
 <h3>Component Exercises</h3>
 
 
-<ul>
-	<li *ngFor="let d of days">{{d}}</li>
-</ul>
+<div>
+	<span>The days in English starts with Capital letter.</span>
+
+	<tr *ngFor="let d of days; let i = index" [attr.data-index]="i">
+		<th>
+			<span>{{d.dia}}</span>			
+		</th>
+		<th>
+			<input type="text" [(ngModel)]="checkDay[i]">
+		</th>
+	</tr>
+	<button (click)="correctDays()">Correct</button>
+</div>
