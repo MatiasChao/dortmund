@@ -16,6 +16,7 @@ const appRoutes: Routes = [
 	//Ruta por error / defecto
 	//{ path: '**', component: HomeComponent },
 
+	// VER DONDE AGREGAR LOS HEADERS EN EL PROYECTO PARA QUE FUNCIONEN LAS PEGADAS LOCALES
 
 	{ path: 'words', component: WordsComponent },
 	{ path: 'home', component: HomeComponent },

@@ -8,15 +8,20 @@
   	<button mat-button (click)="onLogout()">Logout</button> -->
 </mat-toolbar>
 
-<hr>
-<nav>
+<nav id="nav">
 	<a [routerLink]="['/home']">Home</a>
 	<a [routerLink]="['/words']">Words</a>
 	<a [routerLink]="['/verbs']">Verbs</a>
 	<a [routerLink]="['/exercises']">Exercises</a>
 </nav>
-<hr>
 
+<section id="main">
+	<router-outlet></router-outlet> 
+</section>
+
+<footer class="col-lg-12">
+	<span> Learning English </span>
+</footer>
 <!-- INJECT THE HOME COMPONENT
 <mat-card>
   <app-header></app-header>
@@ -28,4 +33,3 @@
 
 
 
-<router-outlet></router-outlet> 
