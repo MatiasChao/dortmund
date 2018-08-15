@@ -8,28 +8,29 @@
   	<button mat-button (click)="onLogout()">Logout</button> -->
 </mat-toolbar>
 
-<nav id="nav">
-	<a [routerLink]="['/home']">Home</a>
-	<a [routerLink]="['/words']">Words</a>
-	<a [routerLink]="['/verbs']">Verbs</a>
-	<a [routerLink]="['/exercises']">Exercises</a>
-</nav>
+<div id="content" class="col-lg-10 col-lg-offset-1">
+	<nav id="nav">
+		<a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+		<a [routerLink]="['/words']" [routerLinkActive]="['activado']">Words</a>
+		<a [routerLink]="['/verbs']" [routerLinkActive]="['activado']">Verbs</a>
+		<a [routerLink]="['/exercises']" [routerLinkActive]="['activado']">Exercises</a>
+	</nav>
 
-<section id="main">
-	<router-outlet></router-outlet> 
-</section>
+	<section id="main">
+		<router-outlet></router-outlet> 
+	</section>
 
-<footer class="col-lg-12">
-	<span> Learning English </span>
-</footer>
-<!-- INJECT THE HOME COMPONENT
-<mat-card>
-  <app-header></app-header>
-  <app-home></app-home>
-  <app-words></app-words>
-  <app-verbs></app-verbs>
-</mat-card>
--->
-
+	<footer id="footer" class="col-lg-12">
+		<span> Learning English </span>
+	</footer>
+	<!-- INJECT THE HOME COMPONENT
+	<mat-card>
+	  <app-header></app-header>
+	  <app-home></app-home>
+	  <app-words></app-words>
+	  <app-verbs></app-verbs>
+	</mat-card>
+	-->
+</div>
 
 
