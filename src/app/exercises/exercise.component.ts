@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-exercises',
   templateUrl: './exercise.component.html',
-  //styleUrls: ['./verbs.component.css'],
+  styleUrls: ['./exercise.component.scss'],
   providers: [ExerciseService]
 })
 

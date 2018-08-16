@@ -1,16 +1,24 @@
 <hr>
 
-<h2>Words Component</h2>
-<h3>Palabras</h3>
+<h3>Exercise Words</h3>
 <div>
-    <ul>
-        <li *ngFor="let w of words; let i = index" [attr.data-index]="i">
-        	<span>{{w.translate}}
-        		<input type="text" [(ngModel)]="checkWord[i]">
-        		<button (click)="helpWord(i)">Help</button>
-        	</span>
-        </li>
-    </ul>
+    <table style="width: 50%">
+        <tr>
+            <th>Word</th>
+            <th>Translate</th>
+        </tr>
+        <tr *ngFor="let w of words; let i = index" [attr.data-index]="i">
+            <th>
+                <span>{{w.translate}}</span>
+            </th>	
+            <th>
+                <input type="text" [(ngModel)]="checkWord[i]">
+            </th>
+            <th>
+                <button (click)="helpWord(i)">Help</button>
+            </th>
+        </tr>
+    </table>
 </div>
 <button (click)="checkAll()">Check</button>
 

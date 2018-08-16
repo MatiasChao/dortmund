@@ -12,7 +12,7 @@ const httpOptions = {
 @Component({
   selector: 'app-words',
   templateUrl: './words.component.html',
-  styleUrls: ['./words.component.css'],
+  styleUrls: ['./words.component.scss'],
   providers: [WordsService]
 })
 
@@ -40,7 +40,7 @@ export class WordsComponent implements OnInit {
     }
 
     helpWord(index){
-      this.checkWord[index] = this.words[index].translate;
+      this.checkWord[index] = this.words[index].name;
     }
 
     checkAll(){

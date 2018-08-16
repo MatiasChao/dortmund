@@ -2,29 +2,30 @@
 
 
 <!-- Pasar esto a un template -->
+<div class="container">
+	<div [hidden]="!exerciseDays" class="days">
+		<span>The days in English starts with Capital letter.</span>
 
-<div [hidden]="!exerciseDays">
-	<span>The days in English starts with Capital letter.</span>
-
-	<table style="width: 30%">
-		<tr style="background-color: red">
-	      <th>Días</th>
-	      <th>Days</th> 
-	    </tr>
-		<tr *ngFor="let d of days; let i = index" [attr.data-index]="i">
-			<th>
-				<span>{{d.dia}}</span>			
-			</th>
-			<th>
-				<input type="text" [(ngModel)]="checkDay[i]">
-			</th>
-			<th [hidden]="false">
-				<span *ngIf="!checkDaysErrores[i] && inicializateCheckDay" style="color: green">OK</span>
-				<span *ngIf="checkDaysErrores[i] && inicializateCheckDay" style="color: red">ERROR</span>
-			</th>
-		</tr>
-		<tr><th><button (click)="correctDays()">Correct</button></th></tr>
-	</table>
-	
+		<table style="width: 30%">
+			<tr style="background-color: red">
+		      <th>Días</th>
+		      <th>Days</th> 
+		    </tr>
+			<tr *ngFor="let d of days; let i = index" [attr.data-index]="i">
+				<th>
+					<span>{{d.dia}}</span>			
+				</th>
+				<th>
+					<input type="text" [(ngModel)]="checkDay[i]">
+				</th>
+				<th [hidden]="false">
+					<span *ngIf="!checkDaysErrores[i] && inicializateCheckDay" style="color: green">OK</span>
+					<span *ngIf="checkDaysErrores[i] && inicializateCheckDay" style="color: red">ERROR</span>
+				</th>
+			</tr>
+			<tr><th><button (click)="correctDays()">Correct</button></th></tr>
+		</table>
+		
+	</div>
+	<button (click)="showExeriseDays()"> Test Days</button>
 </div>
-<button (click)="showExeriseDays()"> Test Days</button>

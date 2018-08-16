@@ -12,7 +12,7 @@ const httpOptions = {
 @Component({
   selector: 'app-verbs',
   templateUrl: './verbs.component.html',
-  styleUrls: ['./verbs.component.css'],
+  styleUrls: ['./verbs.component.scss'],
   providers: [VerbsService]
 })
 
