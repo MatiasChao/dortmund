@@ -3,6 +3,16 @@ mat-card{
   margin: 0 auto;
 }
 
+mat-toolbar {
+	background-color: yellow !important;
+	h1 {
+		font-size: 30px; 
+		color: black;
+		font-family: cursive !important;
+		font-weight: bold;
+	}
+}
+/*
 #content{
 	#nav {
 		a {
@@ -11,4 +21,4 @@ mat-card{
 			font-size: 20px;
 		}
 	}
-}
+}*/

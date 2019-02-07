@@ -1,11 +1,11 @@
-export interface Verb {
+export class Verb {
 
-	id: number;
- 	infinitive: string;
- 	past_simpe: string;
- 	past_participle: string;
- 	translate: string;
- 	//public created_at: string;
- 	//public updated_at: string;
+ 	constructor(
+	    public id:number,
+	    public infinitive:string,
+	    public past_simple:string,
+	    public past_participle:string,
+	    public translate: string
+    ) { }
 
 }

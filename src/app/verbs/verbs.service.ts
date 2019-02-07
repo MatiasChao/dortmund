@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Verb } from './verb';
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 const httpOptions = {
